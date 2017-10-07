@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- lang="en" กำหนดภาษาหลักเว็บ -->
+<head>
+	<meta charset="UTF-8">
+	<!-- meta = กำหนดรายละเอียดเล็กๆน้อยๆ
+	ใช้ utf-8 เพื่ออ่านฟ้อนไทย -->
+	<title>CMM19</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+
+	<link rel="stylesheet" href="/assets/main.css">
+
+	{% block stylesheet %}	{% endblock %}
+</head>
+<body>
+
+	{% include 'layout/header.twig' ignore missing %}
+
+	{% block content %}
+	{% endblock %}
+
+</body>
+</html>

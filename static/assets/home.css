@@ -1,7 +1,3 @@
-header .navbar-tabs { /*ไปหา navtab หรืออยู่ใต้ header*/
-  justify-content: center; /*เรียกฟังก์ชั่น*/
-}
-
 .highlight {
   margin-bottom: 0 !important; /*ลบborderออก*/
 } /*ใน bulma จะบังคับให้มีช่องว่าง 1.5 rem(24pixel - 1rem=16pixel) ระหว่าง highlight-thumbnail*/
@@ -21,14 +17,14 @@ header .navbar-tabs { /*ไปหา navtab หรืออยู่ใต้ he
   }
 
 .thumbnail {
-  border-top: 1px solid #ffffff; 
+  border-top: 3px solid #ffffff; 
   /*0.1rem ขนาดเส้นขอบ*/
   /*solid=ขอบทึบ dot=จุด dash=ขีดๆ*/
 }
 
 .thumbnail .thumbnail-item + .thumbnail-item{ /*+ กันคือไม่เอาตัวแรก(เอาแค่ตัวหลัง)*/
   /*เช่น a+b=ไม่เอาa b+c=ไม่เอาb*/
-  border-left: 3px solid red; /*ใส่ขอบฝั่งขวา*/
+  border-left: 3px solid #ffffff; /*ใส่ขอบฝั่งขวา*/
 }
 
 /*.thumbnail .thumbnail-item:last-child {

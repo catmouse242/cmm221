@@ -1,0 +1,3 @@
+header .navbar-tabs { /*ไปหา navtab หรืออยู่ใต้ header*/
+  justify-content: center; /*เรียกฟังก์ชั่น*/
+}

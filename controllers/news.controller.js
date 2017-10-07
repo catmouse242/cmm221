@@ -1,7 +1,8 @@
 exports.index = function(req, res) {
 /*สร้าง index*/
-	let content = { /*content=ตัวแปร*/
-		banner: [
+	res.render('news.twig')
+/*	let content = { /*content=ตัวแปร*/
+/*		banner: [
 			{
 				id:1,
 				url: '//image/img-1.jpg',
@@ -15,5 +16,5 @@ exports.index = function(req, res) {
 		]
 	}
 
-	res.json(content)
+	res.json(content)*/
 }

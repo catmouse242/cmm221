@@ -1,58 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- lang="en" กำหนดภาษาหลักเว็บ -->
-<head>
-	<meta charset="UTF-8">
-	<!-- meta = กำหนดรายละเอียดเล็กๆน้อยๆ
-	ใช้ utf-8 เพื่ออ่านฟ้อนไทย -->
-	<title>CMM19</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+<!-- COMMENT -->
+{% extends 'layout/base.twig' %}
+
+{% block stylesheet %}
 	<link rel="stylesheet" href="/assets/home.css">
-	<style type="text/css">
-		.navbar-item {
+{% endblock %}
 
-		}
-	</style>
-</head>
-<body>
-	<!-- COMMENT -->
-	<header>
-		<div class="has-text-centered">
-			<img src="/assets/images/logo.png" alt="" width="145" height="auto"> <!--แทรกรูป กำหนดขนาด-->
-		</div>
-		<div class="nav-center">
-		<nav class="navbar-tabs">
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-			<a href="#" class="nav-item">WORK</a>
-		</nav>
-		</div>
-
-
-	</header>
+{% block content %}
+	
 	<!--h1 class="has-text-centered">เวร</h1--> <!--ทำตรงกลาง-->
 	<main>
 		<section class="banner">
 			<div class="highlight">
 				<div class="columns">
-					<div class="column highlight-item">
-						<h1>สวนเวร</h1> <!--h1 ควรมีตัวเดียว/หน้า-->
-					</div>
+					<!--<div class="column highlight-item"></div>-->
+					<a class="column highlight-item" style="background-image: url({{highlight.url }});">
+						<h1>{{ highlight.title }}</h1> <!--h1 ควรมีตัวเดียว/หน้า-->
+					</a>
 				</div>
 			</div>
-			<div>
+
 				<div class="thumbnail">
 					<div class="columns is-marginless">
-						<div class="column thumbnail-item is-paddingless has-text-centered" style="background-image: url(/assets/images/home/banner/thumbnail-1.jpg);">
-							ดีจ้า
+						{% for item in thumbnail %}
+						<div class="column thumbnail-item is-paddingless has-text-centered" style="background-image: url({{ item.url }});">
+							{{ item.title }}
 						</div>
+						{% endfor %}
 
-						<div class="column thumbnail-item is-paddingless" style="background-image: url(/assets/images/home/banner/thumbnail-2.jpg);">
+						<!--<div class="column thumbnail-item is-paddingless" style="background-image: url(/assets/images/home/banner/thumbnail-2.jpg);">
 							จ๊าจางงง
 						</div>
 
@@ -61,14 +36,15 @@
 						</div>
 
 						<div class="column thumbnail-item is-paddingless" style="background-image: url(/assets/images/home/banner/thumbnail-4.jpg);"> 
-							<!--paddingless=เอาขอบของรูปออก-->
+							<!paddingless=เอาขอบของรูปออก
 							อุว้าว
 						</div>
 
 						<div class="column thumbnail-item is-paddingless" style="background-image: url(/assets/images/home/banner/thumbnail-5.jpg);">
 							อรุมมม
-						</div>
-			</div>
+						</div>-->
+					</div>
+				</div>
 		</section>
 
 		<section class="section we-present">
@@ -266,14 +242,14 @@
 							</div>
 						</div>
 					</a>					
-<!--ในbulmaจะทำ h1-6(heading)ขนาดเท่ากันหมด เรียงใหญ่ไปเล็ก /frameworkอื่นจะแตกต่างกันไป)
 		</section>
 	</main>
-</body>
-</html>
-<! cd = change directory เปลี่ยนปลายทาง command promt -->
+{% endblock %}
+
+<!-- cd = change directory เปลี่ยนปลายทาง command promt -->
 <!-- พิมพ์dก่อนจะเปลี่ยนปลายทางเป็น drive d ค่อยทำ cd อีกรอบ -->
 <!-- dir = click folder -->
 <!-- bootstrap ต้องใช้ เดอคิวรี่ มันหนัก -->
 <!-- foundation หยุดพัฒนาแล้ว -->
 <!-- bulma - mobile first เน้นแพลทฟอมมือถือ -->
+<!--ในbulmaจะทำ h1-6(heading)ขนาดเท่ากันหมด เรียงใหญ่ไปเล็ก /frameworkอื่นจะแตกต่างกันไป)-->

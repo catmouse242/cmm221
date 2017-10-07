@@ -37,3 +37,5 @@ app.listen(8000, function(err) {
 /*app.get('/home', function(req,res){
 	res.send('Home')
 })*/
+
+/*npm i -g nodemon = ช่วยให้ restart serverให้ ไม่ต้องไปกดรีใหม่เอง*/
