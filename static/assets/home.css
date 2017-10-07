@@ -1,0 +1,46 @@
+header .navbar-tabs { /*ไปหา navtab หรืออยู่ใต้ header*/
+  justify-content: center; /*เรียกฟังก์ชั่น*/
+}
+
+.highlight {
+  margin-bottom: 0 !important; /*ลบborderออก*/
+} /*ใน bulma จะบังคับให้มีช่องว่าง 1.5 rem(24pixel - 1rem=16pixel) ระหว่าง highlight-thumbnail*/
+/*browserให้น้ำหนักframework bulma มากกว่าเลยมีขอบ ใส่importantเข้าไปเพื่อบอกว่าโค้ดฉันสำคัญกว่าจ่ะ*/
+
+.highlight .highlight-item {
+  height: 416px;
+  background: url(/assets/images/home/banner/highlight.jpg) no-repeat center/cover;
+  color: #ffffff;
+  display: flex; /*ใช้เหมือนจัดคอลัม*/
+  justify-content: center; /*ให้คอนเท้นมากองตรงกลางแนวนอน*/
+  align-items: center; /*ให้คอนเท้นมากองตรงกลางแนวตั้ง*/
+}
+
+.highlight .highlight-item h1{
+  font-size: 100px;
+  }
+
+.thumbnail {
+  border-top: 1px solid #ffffff; 
+  /*0.1rem ขนาดเส้นขอบ*/
+  /*solid=ขอบทึบ dot=จุด dash=ขีดๆ*/
+}
+
+.thumbnail .thumbnail-item + .thumbnail-item{ /*+ กันคือไม่เอาตัวแรก(เอาแค่ตัวหลัง)*/
+  /*เช่น a+b=ไม่เอาa b+c=ไม่เอาb*/
+  border-left: 3px solid red; /*ใส่ขอบฝั่งขวา*/
+}
+
+/*.thumbnail .thumbnail-item:last-child {
+  border: none; /*ให้อันสุดท้ายไม่มีขอบ*/
+
+.thumbnail .thumbnail-item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff; /*สีtext*/
+  display: flex;
+  justify-content: center; /*ให้คอนเท้นมากองตรงกลางแนวนอน*/
+  align-items: center; /*ให้คอนเท้นมากองตรงกลางแนวตั้ง*/
+  height: 10rem; 
+}
